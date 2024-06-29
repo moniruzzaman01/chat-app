@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const _dirname1 = path.resolve();
 // console.log("hello", process.env.NODE_ENV);
 if (true) {
-  app.use(express.static(path.join(_dirname1, "/client/dist")));
+  app.use(express.static(path.join(_dirname1, "client", "dist")));
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(_dirname1, "client", "dist", "index.html"));

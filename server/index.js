@@ -38,7 +38,6 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("user-added", { username });
   });
   socket.on("send-message", (message) => {
-    console.log("message", message);
     socket.broadcast.emit("message-sended", message);
   });
 });
